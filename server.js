@@ -5,6 +5,6 @@ app.get("/", (req, res) => {
     res.send("Linda Rasmussen");
 });
 
-app.listen(3000, () => {
-    console.log("Server listening on port 3000");
+app.listen(8080, () => {
+    console.log("Listening on port 8080");
 });
