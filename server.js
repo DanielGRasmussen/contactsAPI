@@ -10,7 +10,7 @@ app.get("/contacts", function(req, res) {
     routes.contacts(req, res);
 });
 
-app.get("/contact/:id", function(req, res) {
+app.get("/contacts/:id", function(req, res) {
     routes.contactById(req, res);
 });
 

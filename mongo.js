@@ -7,6 +7,7 @@ const collectionName = process.env.COLLECTION_NAME;
 
 let client;
 async function connect() {
+    console.log(url)
     client = await MongoClient.connect(url, { useNewUrlParser: true });
 }
 
