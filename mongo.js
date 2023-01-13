@@ -18,10 +18,13 @@ exports.insert = async function insert(docs) {
 }
 
 exports.get = async function get() {
+    console.log("Starting retrieval")
     await connect();
     const db = client.db(dbName);
     const collection = db.collection(collectionName);
+    console.log("Connected")
     const docs = await collection.find({}).toArray();
+    console.log("Retrieved")
     return docs;
 }
 

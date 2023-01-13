@@ -5,9 +5,11 @@ exports.main = function(req, res) {
 };
 
 exports.contacts = function(req, res) {
+    console.log("Contacts")
     mongo.get().then(contacts => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(contacts);
+        console.log("Contacts sent")
     })
 };
 
