@@ -1,15 +1,8 @@
-const mongo = require('../mongo');
-
-exports.main = function(req, res) {
-    res.send("Linda Rasmussen");
-};
+const mongo = require("../mongo");
 
 exports.contacts = function(req, res) {
-    console.log("Contacts")
     mongo.get().then(contacts => {
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(contacts);
-        console.log("Contacts sent")
+        res.send(contacts);
     })
 };
 

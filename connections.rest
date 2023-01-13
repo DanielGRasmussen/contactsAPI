@@ -1,5 +1,11 @@
 GET http://localhost:8080
-
+###
 GET http://localhost:8080/contacts
-
-GET http://localhost:8080/contacts/63c1b89085b5aea9fe489aad/
+###
+GET http://localhost:8080/contacts/63c1b89085b5aea9fe489aad
+###
+GET https://cse341-anr0.onrender.com
+###
+GET https://cse341-anr0.onrender.com/contacts
+###
+GET https://cse341-anr0.onrender.com/contacts/63c1b89085b5aea9fe489aad
