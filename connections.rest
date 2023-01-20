@@ -1,11 +1,44 @@
-GET http://localhost:8080
+GET http://localhost:8080/contacts/
 ###
-GET http://localhost:8080/contacts
+GET http://localhost:8080/contacts/contact/63cafb2da5f839e65fc1192d
 ###
-GET http://localhost:8080/contacts/63c1b89085b5aea9fe489aad
+GET http://localhost:8080/contacts/createContact
 ###
-GET https://cse341-anr0.onrender.com
+GET http://localhost:8080/contacts/updateContact/63cafb2da5f839e65fc1192d
 ###
-GET https://cse341-anr0.onrender.com/contacts
+GET http://localhost:8080/contacts/deleteContact/63cafb2da5f839e65fc1192d
 ###
-GET https://cse341-anr0.onrender.com/contacts/63c1b89085b5aea9fe489aad
+
+POST http://localhost:8080/contacts/ HTTP/1.1
+content-type: application/json
+
+{
+	"firstName": "Daniel",
+	"lastName": "Rasmussen",
+	"email": "danielgrasmussen42@gmail.com",
+	"favoriteColor": "blue",
+	"birthday": "5/21/05"
+}
+
+###
+GET https://cse341-anr0.onrender.com/contacts/
+###
+GET https://cse341-anr0.onrender.com/contacts/contact/63cafb2da5f839e65fc1192d
+###
+GET https://cse341-anr0.onrender.com/contacts/createContact
+###
+GET https://cse341-anr0.onrender.com/contacts/updateContact/63cafb2da5f839e65fc1192d
+###
+GET https://cse341-anr0.onrender.com/contacts/deleteContact/63cafb2da5f839e65fc1192d
+###
+
+POST https://cse341-anr0.onrender.com/contacts/ HTTP/1.1
+content-type: application/json
+
+{
+	"firstName": "Daniel",
+	"lastName": "Rasmussen",
+	"email": "danielgrasmussen42@gmail.com",
+	"favoriteColor": "blue",
+	"birthday": "5/21/05"
+}
