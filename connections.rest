@@ -29,3 +29,40 @@ content-type: application/json
 }
 ### Delete a contact
 DELETE http://localhost:8080/contacts/63d41b14f0c2ac782c48273e HTTP/1.1
+
+
+
+
+
+
+### Get all contacts 
+GET https://cse341-anr0.onrender.com/contacts
+
+### Get contact by id 
+GET https://cse341-anr0.onrender.com/contacts/63d41b14f0c2ac782c48273e
+
+### Post a contact 
+POST https://cse341-anr0.onrender.com/contacts/ HTTP/1.1
+content-type: application/json
+
+{
+	"firstName": "Daniel",
+	"lastName": "Rasmussen",
+	"email": "danielgrasmussen42@gmail.com",
+	"favoriteColor": "blue",
+	"birthday": "5/21/05"
+}
+
+### Put a contact
+PUT https://cse341-anr0.onrender.com/contacts/63d41b14f0c2ac782c48273e HTTP/1.1
+content-type: application/json
+
+{
+	"firstName": "Daniel",
+	"lastName": "Rasmussen",
+	"email": "danielgrasmussen42@gmail.com",
+	"favoriteColor": "purple",
+	"birthday": "5/21/05"
+}
+### Delete a contact
+DELETE https://cse341-anr0.onrender.com/contacts/63d41b14f0c2ac782c48273e HTTP/1.1

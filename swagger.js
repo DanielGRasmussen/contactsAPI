@@ -5,17 +5,17 @@ const doc = {
 		title: "My API",
 		description: "Description"
 	},
-	host: "localhost:8080",
+	host: "cse341-anr0.onrender.com",
 	schemes: ["http"]
 };
 
 const outputFile = "./swagger.json";
-const endpointsFiles = ["./routes/index.js"];
+const endpointsFiles = ["./server.js", "./routes/index.js"];
 
 // generate swagger.json
 swaggerAutogen(outputFile, endpointsFiles, doc);
 
 // Run server after it gets generated
 // swaggerAutogen(outputFile, endpointsFiles, doc).then(async () => {
-//   await import('./index.js');
+// 	await import("./server.js");
 // });
