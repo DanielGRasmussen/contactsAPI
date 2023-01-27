@@ -1,10 +1,13 @@
 const express = require("express");
 const app = express();
-app.use(express.json());
 
-app.use("/", require("./routes/index"));
-app.use("/contacts", require("./routes/contacts"));
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger.json");
 
-app.listen(8080, function () {
-	console.log("Listening on port 8080");
-});
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+	.use(express.json())
+	.use("/", require("./routes/index"))
+	.use("/contacts", require("./routes/contacts"))
+	.listen(8080, function () {
+		console.log("Listening on port 8080");
+	});

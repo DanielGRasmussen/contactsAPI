@@ -19,24 +19,6 @@ exports.getSingle = function (req, res) {
 
 exports.createContact = function (req, res) {
 	const doc = {
-		firstName: "Daniel",
-		lastName: "Rasmussen",
-		email: "danielgrasmussen42@gmail.com",
-		favoriteColor: "blue",
-		birthday: "5/21/05"
-	};
-
-	mongo.post(doc).then((id) => {
-		if (id) {
-			res.send(id).status(201);
-		} else {
-			res.send("Creation failed").status(404);
-		}
-	});
-};
-
-exports.createContactT = function (req, res) {
-	const doc = {
 		firstName: req.body.firstName,
 		lastName: req.body.lastName,
 		email: req.body.email,
@@ -56,11 +38,11 @@ exports.createContactT = function (req, res) {
 exports.updateContact = function (req, res) {
 	const id = req.params.id;
 	const doc = {
-		firstName: "Daniel",
-		lastName: "Rasmussen",
-		email: "danielgrasmussen42@gmail.com",
-		favoriteColor: "purple",
-		birthday: "5/21/05"
+		firstName: req.body.firstName,
+		lastName: req.body.lastName,
+		email: req.body.email,
+		favoriteColor: req.body.favoriteColor,
+		birthday: req.body.birthday
 	};
 
 	mongo.put(id, doc).then((status) => {

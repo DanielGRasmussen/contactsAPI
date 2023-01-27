@@ -1,14 +1,10 @@
-GET http://localhost:8080/contacts/
-###
-GET http://localhost:8080/contacts/contact/63cafb2da5f839e65fc1192d
-###
-GET http://localhost:8080/contacts/createContact
-###
-GET http://localhost:8080/contacts/updateContact/63cafb2da5f839e65fc1192d
-###
-GET http://localhost:8080/contacts/deleteContact/63cafb2da5f839e65fc1192d
-###
+### Get all contacts 
+GET http://localhost:8080/contacts
 
+### Get contact by id 
+GET http://localhost:8080/contacts/63d41b14f0c2ac782c48273e
+
+### Post a contact 
 POST http://localhost:8080/contacts/ HTTP/1.1
 content-type: application/json
 
@@ -20,25 +16,16 @@ content-type: application/json
 	"birthday": "5/21/05"
 }
 
-###
-GET https://cse341-anr0.onrender.com/contacts/
-###
-GET https://cse341-anr0.onrender.com/contacts/contact/63cafb2da5f839e65fc1192d
-###
-GET https://cse341-anr0.onrender.com/contacts/createContact
-###
-GET https://cse341-anr0.onrender.com/contacts/updateContact/63cafb2da5f839e65fc1192d
-###
-GET https://cse341-anr0.onrender.com/contacts/deleteContact/63cafb2da5f839e65fc1192d
-###
-
-POST https://cse341-anr0.onrender.com/contacts/ HTTP/1.1
+### Put a contact
+PUT http://localhost:8080/contacts/63d41b14f0c2ac782c48273e HTTP/1.1
 content-type: application/json
 
 {
 	"firstName": "Daniel",
 	"lastName": "Rasmussen",
 	"email": "danielgrasmussen42@gmail.com",
-	"favoriteColor": "blue",
+	"favoriteColor": "purple",
 	"birthday": "5/21/05"
 }
+### Delete a contact
+DELETE http://localhost:8080/contacts/63d41b14f0c2ac782c48273e HTTP/1.1
